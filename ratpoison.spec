@@ -7,6 +7,7 @@ License:	GPL
 Group:		X11/Window Managers
 Source0:	http://dl.sourceforge.net/sourceforge/%{name}/%{name}-%{version}.tar.gz
 # Source0-md5:	7cc7a1149554b2f76e4c52d5c3592b74
+Source1:        %{name}-xsession.desktop
 URL:		http://ratpoison.sourceforge.net/
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -37,9 +38,11 @@ dziedzinie terminali wirtualnych.
 
 %install
 rm -rf $RPM_BUILD_ROOT
-install -d $RPM_BUILD_ROOT
 
 %{__make} install DESTDIR=$RPM_BUILD_ROOT
+
+install -d $RPM_BUILD_ROOT%{_datadir}/xsessions
+install %{SOURCE1} $RPM_BUILD_ROOT%{_datadir}/xsessions/%{name}.desktop
 
 %clean
 rm -rf $RPM_BUILD_ROOT
@@ -51,3 +54,4 @@ rm -rf $RPM_BUILD_ROOT
 %doc %{_infodir}/*
 %attr(755,root,root) %{_bindir}/*
 %{_datadir}/%{name}
+%{_datadir}/xsessions/%{name}.desktop
