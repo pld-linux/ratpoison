@@ -5,7 +5,7 @@ Version:	1.1.1
 Release:	1
 License:	GPL
 Group:		X11/Window Managers
-Source0:	http://telia.dl.sourceforge.net/sourceforge/ratpoison/%{name}-%{version}.tar.gz
+Source0:	http://dl.sourceforge.net/sourceforge/%{name}/%{name}-%{version}.tar.gz
 # Source0-md5:	59efd0719b6c3a9f9fcd606df95e5208
 URL:		http://ratpoison.sourceforge.net/
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
