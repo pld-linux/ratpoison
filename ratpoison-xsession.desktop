@@ -9,3 +9,4 @@ Comment=A simple keyboard-only window manger modelled after Screen
 Comment[nl]=Een eenvoudige windowmanager, welke alleen met het toetsenbord te bedienen is
 Comment[sr]=Једноставан, само за тастатуру, менаџер прозора, направљен према Screen-у
 Comment[sv]=En enkelt fönsterhanterare bara för tangentbord modellerad efter Screen
+# vi: encoding=utf-8
