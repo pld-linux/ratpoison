@@ -9,6 +9,8 @@ Source0:	http://dl.sourceforge.net/sourceforge/%{name}/%{name}-%{version}.tar.gz
 # Source0-md5:	7cc7a1149554b2f76e4c52d5c3592b74
 Source1:        %{name}-xsession.desktop
 URL:		http://ratpoison.sourceforge.net/
+BuildRequires:	autoconf
+BuildRequires:	automake
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %define		_docdir		%{_prefix}/share/doc/%{name}
@@ -26,7 +28,7 @@ Jest wzorowany na programie GNU screen, który wyczynia cuda w
 dziedzinie terminali wirtualnych.
 
 %prep
-%setup -q -n %{name}-%{version}
+%setup -q
 
 %build
 %{__aclocal}
@@ -39,7 +41,8 @@ dziedzinie terminali wirtualnych.
 %install
 rm -rf $RPM_BUILD_ROOT
 
-%{__make} install DESTDIR=$RPM_BUILD_ROOT
+%{__make} install \
+	DESTDIR=$RPM_BUILD_ROOT
 
 install -d $RPM_BUILD_ROOT%{_datadir}/xsessions
 install %{SOURCE1} $RPM_BUILD_ROOT%{_datadir}/xsessions/%{name}.desktop
@@ -50,8 +53,8 @@ rm -rf $RPM_BUILD_ROOT
 %files
 %defattr(644,root,root,755)
 %doc %{_docdir}/*
-%doc %{_mandir}/man1/*
-%doc %{_infodir}/*
 %attr(755,root,root) %{_bindir}/*
 %{_datadir}/%{name}
 %{_datadir}/xsessions/%{name}.desktop
+%{_mandir}/man1/*
+%{_infodir}/*.info*
