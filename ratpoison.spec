@@ -9,7 +9,6 @@ Source0:	http://telia.dl.sourceforge.net/sourceforge/ratpoison/%{name}-%{version
 URL:		http://ratpoison.sourceforge.net/
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
-%define         _prefix         /usr/X11R6
 %define		_docdir		%{_prefix}/share/doc/%{name}
 
 %description
