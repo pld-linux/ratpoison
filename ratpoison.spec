@@ -11,6 +11,7 @@ Source1:	%{name}-xsession.desktop
 URL:		http://ratpoison.sourceforge.net/
 BuildRequires:	autoconf
 BuildRequires:	automake
+BuildRequires:	readline-devel
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %define		_docdir		%{_prefix}/share/doc/%{name}
