@@ -9,6 +9,7 @@ Source0:	http://dl.sourceforge.net/sourceforge/%{name}/%{name}-%{version}.tar.gz
 # Source0-md5:	75541248c355a3f1e09e864dd23a43f4
 Source1:	%{name}-xsession.desktop
 URL:		http://ratpoison.sourceforge.net/
+BuildRequires:	XFree86-devel
 BuildRequires:	autoconf
 BuildRequires:	automake
 BuildRequires:	readline-devel
