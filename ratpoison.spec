@@ -5,7 +5,7 @@ Version:	1.3.0
 Release:	2
 License:	GPL
 Group:		X11/Window Managers
-Source0:	http://dl.sourceforge.net/sourceforge/%{name}/%{name}-%{version}.tar.gz
+Source0:	http://dl.sourceforge.net/ratpoison/%{name}-%{version}.tar.gz
 # Source0-md5:	75541248c355a3f1e09e864dd23a43f4
 Source1:	%{name}-xsession.desktop
 URL:		http://ratpoison.sourceforge.net/
