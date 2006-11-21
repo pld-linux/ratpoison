@@ -9,10 +9,13 @@ Source0:	http://savannah.nongnu.org/download/%{name}/%{name}-%{version}.tar.gz
 # Source0-md5:	358abef81387f2d554f4a397dee968b1
 Source1:	%{name}-xsession.desktop
 URL:		http://www.nongnu.org/ratpoison/
-BuildRequires:	xorg-lib-libX11-devel
-BuildRequires:	autoconf
+BuildRequires:	autoconf >= 2.59-9
 BuildRequires:	automake
 BuildRequires:	readline-devel
+BuildRequires:	xorg-lib-libX11-devel
+BuildRequires:	xorg-lib-libXext-devel
+BuildRequires:	xorg-lib-libXinerama-devel
+BuildRequires:	xorg-lib-libXtst-devel
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %define		_docdir		%{_prefix}/share/doc/%{name}
@@ -54,7 +57,7 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%dir %{_docdir}/
+%dir %{_docdir}
 %doc %{_docdir}/*
 %attr(755,root,root) %{_bindir}/*
 %{_datadir}/%{name}
