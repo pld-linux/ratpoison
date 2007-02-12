@@ -1,5 +1,5 @@
 Summary:	A simple X11 window manager
-Summary(pl):	Prosty zarz±dca okien dla X11
+Summary(pl.UTF-8):   Prosty zarzÄ…dca okien dla X11
 Name:		ratpoison
 Version:	1.4.0
 Release:	1
@@ -26,10 +26,10 @@ no fancy graphics, no window decorations, and no flashy wank. It is
 largely modelled after GNU Screen which has done wonders in virtual
 terminal market.
 
-%description -l pl
-ratpoison jest prostym zarz±dc± okien dla X11 pozbawionym zale¿no¶ci
-od obszernych bibliotek, bez fantazyjnej grafiki i ozdobników okien.
-Jest wzorowany na programie GNU screen, który wyczynia cuda w
+%description -l pl.UTF-8
+ratpoison jest prostym zarzÄ…dcÄ… okien dla X11 pozbawionym zaleÅ¼noÅ›ci
+od obszernych bibliotek, bez fantazyjnej grafiki i ozdobnikÃ³w okien.
+Jest wzorowany na programie GNU screen, ktÃ³ry wyczynia cuda w
 dziedzinie terminali wirtualnych.
 
 %prep
