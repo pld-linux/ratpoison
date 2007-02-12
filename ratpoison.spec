@@ -1,5 +1,5 @@
 Summary:	A simple X11 window manager
-Summary(pl.UTF-8):   Prosty zarządca okien dla X11
+Summary(pl.UTF-8):	Prosty zarządca okien dla X11
 Name:		ratpoison
 Version:	1.4.0
 Release:	1
