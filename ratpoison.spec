@@ -1,13 +1,14 @@
 Summary:	A simple X11 window manager
 Summary(pl.UTF-8):	Prosty zarządca okien dla X11
 Name:		ratpoison
-Version:	1.4.3
-Release:	2
-License:	GPL
+Version:	1.4.5
+Release:	1
+License:	GPL v2+
 Group:		X11/Window Managers
-Source0:	http://savannah.nongnu.org/download/%{name}/%{name}-%{version}.tar.gz
-# Source0-md5:	c1899e3e2549d29825cdb1b8d042c836
+Source0:	http://savannah.nongnu.org/download/ratpoison/%{name}-%{version}.tar.gz
+# Source0-md5:	330a08dbed6be88cab54f6947e9f0b60
 Source1:	%{name}-xsession.desktop
+Patch0:		%{name}-getline.patch
 URL:		http://www.nongnu.org/ratpoison/
 BuildRequires:	autoconf >= 2.59-9
 BuildRequires:	automake
@@ -17,8 +18,6 @@ BuildRequires:	xorg-lib-libXext-devel
 BuildRequires:	xorg-lib-libXinerama-devel
 BuildRequires:	xorg-lib-libXtst-devel
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
-
-%define		_docdir		%{_prefix}/share/doc/%{name}
 
 %description
 ratpoison is a simple Window Manager with no fat library dependencies,
@@ -34,6 +33,7 @@ dziedzinie terminali wirtualnych.
 
 %prep
 %setup -q
+%patch0 -p1
 
 %build
 %{__aclocal}
@@ -59,10 +59,9 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%dir %{_docdir}
-%doc %{_docdir}/*
+%doc AUTHORS ChangeLog NEWS README TODO doc/*.texi
 %attr(755,root,root) %{_bindir}/*
 %{_datadir}/%{name}
 %{_datadir}/xsessions/%{name}.desktop
-%{_mandir}/man1/*
+%{_mandir}/man1/ratpoison.1*
 %{_infodir}/*.info*
