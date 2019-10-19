@@ -2,7 +2,7 @@ Summary:	A simple X11 window manager
 Summary(pl.UTF-8):	Prosty zarządca okien dla X11
 Name:		ratpoison
 Version:	1.4.5
-Release:	3
+Release:	4
 License:	GPL v2+
 Group:		X11/Window Managers
 Source0:	http://savannah.nongnu.org/download/ratpoison/%{name}-%{version}.tar.gz
